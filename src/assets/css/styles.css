@@ -1,0 +1,117 @@
+.e-radio {
+  --label-offset: 8px;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.e-radio--disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.e-radio--block {
+  display: flex;
+  width: 100%;
+}
+
+/* Отвечает за положение радиокнопки относительно контента */
+
+.e-radio--orientation-left {
+  flex-direction: row;
+}
+
+.e-radio--orientation-right {
+  flex-direction: row-reverse;
+}
+
+.e-radio--orientation-top {
+  flex-direction: column;
+}
+
+.e-radio--orientation-bottom {
+  flex-direction: column-reverse;
+}
+
+/* Контейнер, в котором располагается радиокнопка */
+
+.e-radio__box {
+  display: inline-flex;
+  position: relative; /* Для растягивания input поверх коробки */
+  color: #666;
+}
+
+.e-radio__box--checked {
+  color: #1976d2;
+}
+
+.e-radio__box--disabled {
+  color: #bdbdbd;
+}
+
+.e-radio__box--readonly {
+  opacity: 0.6;
+}
+
+.e-radio__box--position-left {
+  margin-right: var(--label-offset);
+}
+
+.e-radio__box--position-right {
+  margin-left: var(--label-offset);
+}
+
+.e-radio__box--position-top {
+  margin-bottom: var(--label-offset);
+}
+
+.e-radio__box--position-bottom {
+  margin-top: var(--label-offset);
+}
+
+.e-radio__box--align-start {
+  align-self: flex-start;
+}
+
+.e-radio__box--align-center {
+  align-self: center;
+}
+
+.e-radio__box--align-end {
+  align-self: flex-end;
+}
+
+.e-radio__icon {
+  height: 24px;
+  width: 24px;
+  fill: currentColor;
+  border-radius: 50%;
+}
+
+/* label, input, hint */
+
+.e-radio__label {
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.e-radio__input {
+  /* Растягиваем радиокнопку на всё пространство для возможности переключения щелчком по иконке */
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.e-radio__input:focus-visible + .e-radio__icon {
+  outline: 1px solid currentColor;
+}
+
+.e-radio__hint {
+  display: block;
+  margin-top: 6px;
+  color: var(--e-colors-darkgray-lighten-20);
+  font-size: 12px;
+}
