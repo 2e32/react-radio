@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Radio from '@2e32/react-radio';
+import Radio from '../Radio';
 
 import type { RadioGroupProps, RadioGroupComponent } from './types';
 import { Container, Label, Hint } from './components';
