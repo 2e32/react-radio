@@ -1,6 +1,6 @@
-import type { OptionKey, OptionContent, OptionValue, ExtraProps } from '../types';
+import { isString, isNumber, isFunction } from '../../utils';
 
-import { isString, isNumber, isFunction } from './checkType';
+import type { OptionKey, OptionContent, OptionValue, ExtraProps } from '../types';
 
 /**
  * Получает ключ опции.
