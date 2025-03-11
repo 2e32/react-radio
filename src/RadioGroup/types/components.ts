@@ -19,6 +19,14 @@ interface LabelProps {
   asteriskClassName?: string;
 }
 
+/**
+ * Свойства подсказки.
+ */
+interface HintProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
 type AsteriskPosition = 'left' | 'right';
 
 /**
@@ -30,4 +38,4 @@ interface AsteriskProps {
   className?: string;
 }
 
-export type { ContainerProps, LabelProps, AsteriskPosition, AsteriskProps };
+export type { ContainerProps, LabelProps, HintProps, AsteriskPosition, AsteriskProps };
