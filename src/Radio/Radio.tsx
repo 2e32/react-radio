@@ -1,9 +1,11 @@
 import React, { useRef, useId } from 'react';
 import cn from 'classnames';
 
+import { isFunction } from '../utils';
+
 import type { RadioComponent, RadioProps } from './types';
 import { Container, Box, Label, Hint } from './components';
-import { isFunction, renderIconDefault } from './utils';
+import { renderIconDefault } from './utils';
 
 const Radio = <T,>(props: RadioProps<T>, ref: React.Ref<HTMLSpanElement>) => {
   const {
