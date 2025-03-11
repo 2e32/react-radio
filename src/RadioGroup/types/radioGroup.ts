@@ -1,4 +1,4 @@
-import type { RenderIconProps } from '@2e32/react-radio';
+import type { RenderIconProps } from '../../Radio';
 
 import type { Nullable } from './common';
 import type { AsteriskPosition } from './components';
