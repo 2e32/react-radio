@@ -4,6 +4,12 @@ import type { Nullable } from './common';
 import type { AsteriskPosition } from './components';
 import type { OptionKey, OptionContent, OptionValue } from './getter';
 
+interface OptionProps {
+  key: React.Key;
+  selected: boolean;
+  disabled: boolean;
+}
+
 interface ExtraProps {
   currentIndex: number;
   lastIndex: number;
@@ -16,15 +22,11 @@ interface ExtraProps {
 
 interface RenderOptionProps<O> {
   option: O;
-  optionProps: {
-    key: React.Key;
-    selected: boolean;
-    disabled: boolean;
-  };
+  optionProps: OptionProps;
   extraProps: ExtraProps;
 }
 
-interface RadioGroupProps<V, O> extends Omit<React.HTMLAttributes<HTMLSpanElement>, 'onChange'> {
+interface RadioGroupProps<V, O> extends Omit<React.ComponentPropsWithRef<'span'>, 'onChange'> {
   value?: Nullable<V>;
   label?: React.ReactNode;
   hint?: React.ReactNode;
@@ -82,4 +84,4 @@ type RadioGroupComponent = <V, O>(
   ref: React.Ref<HTMLSpanElement>
 ) => JSX.Element;
 
-export type { ExtraProps, RadioGroupProps, RadioGroupComponent };
+export type { OptionProps, ExtraProps, RenderOptionProps, RadioGroupProps, RadioGroupComponent };
