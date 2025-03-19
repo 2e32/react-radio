@@ -21,6 +21,7 @@
 
 .e-radio-group__content {
   display: flex;
+  min-height: 24px;
 }
 
 /* label, hint */
