@@ -4,6 +4,7 @@
   --asterisk-offset: 4px;
 
   display: flex;
+  flex-direction: column;
 }
 
 .e-radio-group--disabled {
@@ -14,6 +15,12 @@
 .e-radio-group--block {
   display: flex;
   width: 100%;
+}
+
+/* Содержит в себе основной контент - радиокнопки */
+
+.e-radio-group__content {
+  display: flex;
 }
 
 /* label, hint */

@@ -94,7 +94,7 @@ const RadioGroup = <V, O>(props: RadioGroupProps<V, O>, ref: React.Ref<HTMLSpanE
         </Label>
       )}
 
-      {renderedOptions}
+      <div className="e-radio-group__content">{renderedOptions}</div>
 
       {hint != null && <Hint className={hintClassName}>{hint}</Hint>}
     </Container>
