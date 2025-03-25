@@ -39,6 +39,7 @@ interface RadioGroupProps<V, O> extends Omit<React.ComponentPropsWithRef<'span'>
   disabled?: boolean;
   readOnly?: boolean;
   block?: boolean;
+  vertical?: boolean;
   onChange?: (newValue: V, e: React.ChangeEvent<HTMLInputElement>) => void;
 
   /**

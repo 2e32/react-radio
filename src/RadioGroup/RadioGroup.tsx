@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 import Radio from '../Radio';
 
@@ -26,6 +27,7 @@ const RadioGroup = <V, O>(props: RadioGroupProps<V, O>, ref: React.Ref<HTMLSpanE
     disabled = false,
     readOnly = false,
     block = false,
+    vertical = false,
 
     labelClassName,
     hintClassName,
@@ -94,7 +96,11 @@ const RadioGroup = <V, O>(props: RadioGroupProps<V, O>, ref: React.Ref<HTMLSpanE
         </Label>
       )}
 
-      <div className="e-radio-group__content">{renderedOptions}</div>
+      <div
+        className={cn('e-radio-group__content', { 'e-radio-group__content--vertical': vertical })}
+      >
+        {renderedOptions}
+      </div>
 
       {hint != null && <Hint className={hintClassName}>{hint}</Hint>}
     </Container>

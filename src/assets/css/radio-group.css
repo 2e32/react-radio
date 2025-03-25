@@ -3,7 +3,7 @@
 .e-radio-group {
   --asterisk-offset: 4px;
 
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
 }
 
@@ -21,7 +21,13 @@
 
 .e-radio-group__content {
   display: flex;
+  flex: 1;
+  gap: 10px;
   min-height: 24px;
+}
+
+.e-radio-group__content--vertical {
+  flex-direction: column;
 }
 
 /* label, hint */
