@@ -24,19 +24,16 @@ const RadioGroup = <V, O>(props: RadioGroupProps<V, O>, ref: React.Ref<HTMLSpanE
     optionValue,
     optionDisabled,
     isValueEqualOption,
+    labelClassName,
+    hintClassName,
     disabled = false,
     readOnly = false,
     block = false,
     vertical = false,
-
-    labelClassName,
-    hintClassName,
-
     required = false,
     asteriskIcon,
     asteriskPosition = 'right',
     asteriskClassName,
-
     renderIcon,
     renderOption,
     onChange,
