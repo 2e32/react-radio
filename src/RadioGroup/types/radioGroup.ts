@@ -48,7 +48,7 @@ interface RadioGroupProps<V, O> extends Omit<React.ComponentPropsWithRef<'span'>
    */
   optionKey?: OptionKey<O>;
   /**
-   * Отображает значение опции.
+   * Вычисляет контент опции.
    */
   optionContent?: OptionContent<O>;
   /**
@@ -66,7 +66,7 @@ interface RadioGroupProps<V, O> extends Omit<React.ComponentPropsWithRef<'span'>
    * `checked` у опции).
    *
    * ⚠️ Используйте `isValueEqualOption` для сравнения `value` и опции, если они в виде объектов или
-   * представлены разными типами. По умолчанию они сравниваются с помощью Object.is.
+   * представлены разными типами. По умолчанию они сравниваются с помощью `Object.is`.
    *
    * @param value Текущее значение.
    * @param option Опция из списка.
