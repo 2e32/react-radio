@@ -18,7 +18,7 @@ yarn
 yarn add @2e32/react-radio
 ```
 
-## Использование
+## Использование Radio
 
 App.js
 
@@ -278,6 +278,23 @@ export default Page;
     </tr>
   </tbody>
 </table>
+
+## Использование RadioGroup
+
+```javascript
+import { useState } from 'react';
+import Radio from '@2e32/react-radio';
+
+const Page = () => {
+  const [value, setValue] = useState<string>();
+
+  return (
+    <Radio.Group value={value} options={['One', 'Two', 'Three']} onChange={setValue} />
+  );
+};
+
+export default Page;
+```
 
 ## Свойства RadioGroup
 
