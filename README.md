@@ -388,7 +388,7 @@ export default Page;
       </td>
       <td></td>
       <td>
-        Should the option be in the checked state (compare value and option). if the value and the
+        Should the option be in the checked state (compare value and option). If the value and the
         option are equal, then the option is checked.
         <br />
         <br />
@@ -417,7 +417,7 @@ export default Page;
         <code>string</code>
       </td>
       <td></td>
-      <td>The class applied to the label container.</td>
+      <td>The class applied to the label.</td>
     </tr>
     <tr>
       <td>hintClassName</td>
@@ -504,7 +504,7 @@ export default Page;
       </td>
       <td></td>
       <td>
-        The class applied to the <code>asteriskIcon</code> container.
+        The class applied to the <code>asteriskIcon</code>.
       </td>
     </tr>
     <tr>
@@ -517,7 +517,7 @@ export default Page;
         Render radio button icon.
         <br />
         <br />
-        <code>(props: RenderIconProps&lt;T&gt;) => React.ReactNode</code>
+        <code>(props: RenderIconProps&lt;O&gt;) => React.ReactNode</code>
       </td>
     </tr>
     <tr>

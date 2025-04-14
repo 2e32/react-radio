@@ -529,7 +529,7 @@ export default Page;
         ⚠️ Используйте этот метод для собственной стилизации метки.
         <br />
         <br />
-        <code>(props: RenderIconProps&lt;T&gt;) => React.ReactNode</code>
+        <code>(props: RenderIconProps&lt;O&gt;) => React.ReactNode</code>
       </td>
     </tr>
     <tr>
@@ -539,7 +539,7 @@ export default Page;
       </td>
       <td></td>
       <td>
-        Отображает опцию.
+        Отображает опцию (иконку, контент).
         <br />
         <br />
         ⚠️ Используйте этот метод изменения структуры и стилизации опции (её метки, контента).
