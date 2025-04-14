@@ -2,7 +2,7 @@
 
 [Русский (ru)](README.ru.md)
 
-React radio.
+Radio and radio group React-components.
 
 ## How install
 
