@@ -8,9 +8,11 @@
     "frontend",
     "component",
     "radio",
+    "radio group",
     "react",
     "react-component",
-    "react-radio"
+    "react-radio",
+    "react-radio-group"
   ],
   "author": "konstantin_b",
   "repository": {

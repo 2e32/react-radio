@@ -77,10 +77,13 @@ interface RadioProps<T> extends Omit<React.ComponentPropsWithRef<'span'>, 'onCha
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
 }
-
 /**
- * Сигнатура компонента. Radio - это функция вида `(props: RadioProps, ref) => JSX.Element`.
+ * Сигнатура компонента. Radio - это функция вида `(props: RadioProps, ref) => JSX.Element`. У
+ * данной функции есть свойство Group.
  */
-type RadioComponent = <T>(props: RadioProps<T>, ref: React.Ref<HTMLSpanElement>) => JSX.Element;
+type RadioComponent = {
+  <T>(props: RadioProps<T>, ref: React.Ref<HTMLSpanElement>): JSX.Element;
+  Group: typeof import('../../RadioGroup').default;
+};
 
 export type { RadioProps, RadioComponent };

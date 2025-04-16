@@ -1,9 +1,12 @@
 import React, { useRef, useId } from 'react';
 import cn from 'classnames';
 
+import RadioGroup from '../RadioGroup';
+import { isFunction } from '../utils';
+
 import type { RadioComponent, RadioProps } from './types';
 import { Container, Box, Label, Hint } from './components';
-import { isFunction, renderIconDefault } from './utils';
+import { renderIconDefault } from './utils';
 
 const Radio = <T,>(props: RadioProps<T>, ref: React.Ref<HTMLSpanElement>) => {
   const {
@@ -98,4 +101,7 @@ const Radio = <T,>(props: RadioProps<T>, ref: React.Ref<HTMLSpanElement>) => {
   );
 };
 
-export default React.forwardRef(Radio) as RadioComponent;
+const RadioWithRef = React.forwardRef(Radio) as unknown as RadioComponent;
+RadioWithRef.Group = RadioGroup;
+
+export default RadioWithRef;

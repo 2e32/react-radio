@@ -1,0 +1,68 @@
+/* Контейнер верхнего уровня */
+
+.e-radio-group {
+  --asterisk-offset: 4px;
+
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.e-radio-group--disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.e-radio-group--block {
+  display: flex;
+  width: 100%;
+}
+
+/* Содержит в себе основной контент - радиокнопки */
+
+.e-radio-group__content {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  min-height: 24px;
+}
+
+.e-radio-group__content--vertical {
+  flex-direction: column;
+}
+
+/* label, hint */
+
+.e-radio-group__label {
+  display: flex;
+  align-items: center;
+  align-self: flex-start; /* label по ширине содержимого, а не на всю ширину */
+  margin-bottom: 4px;
+  color: var(--e-colors-darkgray-lighten-20);
+  font-size: 14px;
+  line-height: 16px;
+  word-break: break-word;
+}
+
+.e-radio-group__hint {
+  display: block;
+  margin-top: 6px;
+  color: var(--e-colors-darkgray-lighten-20);
+  font-size: 12px;
+}
+
+/* Индикатор обязательности */
+
+.e-radio-group__asterisk {
+  display: inline-flex;
+  color: #ff0000;
+  font-family: monospace;
+  user-select: none;
+}
+
+.e-radio-group__asterisk--position-left {
+  margin-right: var(--asterisk-offset);
+}
+
+.e-radio-group__asterisk--position-right {
+  margin-left: var(--asterisk-offset);
+}
